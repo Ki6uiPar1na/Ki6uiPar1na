@@ -5,11 +5,11 @@
         <a href="index.html" class="text-2xl font-bold">Md. Khairul Islam</a>
         <ul class="flex space-x-4">
             <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
-            <li><a href="about.php" class="hover:text-blue-400">About Me</a></li>
-            <li><a href="competitive_programming.php" class="hover:text-blue-400">Competitive Programming</a></li>
-            <li><a href="cybersecurity.php" class="hover:text-blue-400">Cybersecurity</a></li>
-            <li><a href="projects.php" class="hover:text-blue-400">Projects</a></li>
-            <li><a href="contact.php" class="hover:text-blue-400">Contact</a></li>
+            <li><a href="about.html" class="hover:text-blue-400">About Me</a></li>
+            <li><a href="competitive_programming.html" class="hover:text-blue-400">Competitive Programming</a></li>
+            <li><a href="cybersecurity.html" class="hover:text-blue-400">Cybersecurity</a></li>
+            <li><a href="projects.html" class="hover:text-blue-400">Projects</a></li>
+            <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
         </ul>
     </nav>
 </header>
