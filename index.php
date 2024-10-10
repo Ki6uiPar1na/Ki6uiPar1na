@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Md. Khairul Islam</title>
+    <link rel="icon"
+        href="https://z-p3-scontent.fdac12-1.fna.fbcdn.net/v/t39.30808-6/454610889_1175532617024750_8416981111767377589_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeEbeQza8LG0WAtOZOMze_4wew5LFg4zkQJ7DksWDjORAlw_1x4P1KgcvOc4ueUyhOnuoRIgZWbEcFFWqbnlYB6H&_nc_ohc=qHIkuuRThMQQ7kNvgEksC_y&_nc_ht=z-p3-scontent.fdac12-1.fna&_nc_gid=A3N6nuCHCmszEXsnlTuB2eT&oh=00_AYDJUeciFKp8L8GKfYGEx3Hn3X8BdzPYvisJ0drCE488ew&oe=670D3D92"
+        alt="https://z-p3-scontent.fdac12-1.fna.fbcdn.net/v/t39.30808-6/454610889_1175532617024750_8416981111767377589_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeEbeQza8LG0WAtOZOMze_4wew5LFg4zkQJ7DksWDjORAlw_1x4P1KgcvOc4ueUyhOnuoRIgZWbEcFFWqbnlYB6H&_nc_ohc=qHIkuuRThMQQ7kNvgEksC_y&_nc_ht=z-p3-scontent.fdac12-1.fna&_nc_gid=A3N6nuCHCmszEXsnlTuB2eT&oh=00_AYDJUeciFKp8L8GKfYGEx3Hn3X8BdzPYvisJ0drCE488ew&oe=670D3D92">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-gray-100 text-gray-900">
 
     <?php include 'header.php'; ?>
