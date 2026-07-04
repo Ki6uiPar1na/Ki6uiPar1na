@@ -1,179 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400">
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0a0a0a"/>
-      <stop offset="50%" style="stop-color:#0d1a0d"/>
-      <stop offset="100%" style="stop-color:#0a0a0a"/>
-    </linearGradient>
-    <linearGradient id="glowGreen" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#00ff41;stop-opacity:0"/>
-      <stop offset="50%" style="stop-color:#00ff41;stop-opacity:0.15"/>
-      <stop offset="100%" style="stop-color:#00ff41;stop-opacity:0"/>
-    </linearGradient>
-    <linearGradient id="glowBlue" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0"/>
-      <stop offset="50%" style="stop-color:#00d4ff;stop-opacity:0.1"/>
-      <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:0"/>
-    </linearGradient>
-    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#00ff41"/>
-      <stop offset="50%" style="stop-color:#00d4ff"/>
-      <stop offset="100%" style="stop-color:#00ff41"/>
-    </linearGradient>
-    <filter id="neonGlow">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <filter id="neonGlowStrong">
-      <feGaussianBlur stdDeviation="6" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <clipPath id="hexClip">
-      <polygon points="600,20 780,110 780,290 600,380 420,290 420,110"/>
-    </clipPath>
-  </defs>
-
-  <!-- Background -->
-  <rect width="1200" height="400" fill="url(#bgGrad)"/>
-
-  <!-- Grid overlay -->
-  <g opacity="0.08" stroke="#00ff41" stroke-width="0.5">
-    <line x1="0" y1="50" x2="1200" y2="50"/>
-    <line x1="0" y1="100" x2="1200" y2="100"/>
-    <line x1="0" y1="150" x2="1200" y2="150"/>
-    <line x1="0" y1="200" x2="1200" y2="200"/>
-    <line x1="0" y1="250" x2="1200" y2="250"/>
-    <line x1="0" y1="300" x2="1200" y2="300"/>
-    <line x1="0" y1="350" x2="1200" y2="350"/>
-    <line x1="100" y1="0" x2="100" y2="400"/>
-    <line x1="200" y1="0" x2="200" y2="400"/>
-    <line x1="300" y1="0" x2="300" y2="400"/>
-    <line x1="400" y1="0" x2="400" y2="400"/>
-    <line x1="500" y1="0" x2="500" y2="400"/>
-    <line x1="600" y1="0" x2="600" y2="400"/>
-    <line x1="700" y1="0" x2="700" y2="400"/>
-    <line x1="800" y1="0" x2="800" y2="400"/>
-    <line x1="900" y1="0" x2="900" y2="400"/>
-    <line x1="1000" y1="0" x2="1000" y2="400"/>
-    <line x1="1100" y1="0" x2="1100" y2="400"/>
-  </g>
-
-  <!-- Glow bars -->
-  <rect x="0" y="0" width="1200" height="4" fill="url(#glowGreen)"/>
-  <rect x="0" y="396" width="1200" height="4" fill="url(#glowGreen)"/>
-
-  <!-- Matrix rain effect columns -->
-  <g font-family="monospace" font-size="10" fill="#00ff41" opacity="0.15">
-    <text x="50" y="50">0</text><text x="50" y="70">1</text><text x="50" y="90">0</text>
-    <text x="150" y="30">1</text><text x="150" y="50">0</text><text x="150" y="70">0</text>
-    <text x="250" y="60">1</text><text x="250" y="80">1</text><text x="250" y="100">0</text>
-    <text x="350" y="40">0</text><text x="350" y="60">1</text><text x="350" y="80">1</text>
-    <text x="850" y="50">0</text><text x="850" y="70">1</text><text x="850" y="90">0</text>
-    <text x="950" y="30">1</text><text x="950" y="50">0</text><text x="950" y="70">1</text>
-    <text x="1050" y="60">0</text><text x="1050" y="80">0</text><text x="1050" y="100">1</text>
-    <text x="1150" y="40">1</text><text x="1150" y="60">0</text><text x="1150" y="80">0</text>
-  </g>
-
-  <!-- Hexagonal avatar frame -->
-  <g transform="translate(150, 200)">
-    <polygon points="0,-90 78,-45 78,45 0,90 -78,45 -78,-45" fill="none" stroke="#00ff41" stroke-width="2" filter="url(#neonGlow)"/>
-    <polygon points="0,-85 74,-42.5 74,42.5 0,85 -74,42.5 -74,-42.5" fill="none" stroke="#00d4ff" stroke-width="1" opacity="0.5"/>
-    <circle cx="0" cy="0" r="35" fill="#00ff41" opacity="0.15"/>
-    <text x="0" y="5" text-anchor="middle" fill="#00ff41" font-family="monospace" font-size="14" filter="url(#neonGlow)">KT</text>
-  </g>
-
-  <!-- Main title -->
-  <text x="370" y="145" font-family="'Courier New', monospace" font-size="28" fill="url(#textGrad)" font-weight="bold" filter="url(#neonGlowStrong)">
-    &gt; Md. Khairul Islam
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 250" width="1000" height="250">
+  <rect width="1000" height="250" fill="#ffffff"/>
+  <rect x="0" y="0" width="1000" height="6" fill="#2c3e50"/>
+  <rect x="0" y="244" width="1000" height="6" fill="#2c3e50"/>
+  
+  <text x="50" y="80" font-family="'Helvetica Neue', Arial, sans-serif" font-size="36" font-weight="bold" fill="#2c3e50">Md. Khairul Islam</text>
+  <text x="50" y="105" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#7f8c8d">Cybersecurity Enthusiast  •  Competitive Programmer  •  CSE Undergraduate</text>
+  
+  <line x1="50" y1="120" x2="450" y2="120" stroke="#3498db" stroke-width="2"/>
+  
+  <text x="50" y="148" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#555">
+    <tspan x="50" dy="0">📧 khairulislamtushar33@gmail.com</tspan>
+    <tspan x="50" dy="20">📍 Ishwargonj, Mymensingh, Bangladesh</tspan>
+    <tspan x="50" dy="20">🔗 linkedin.com/in/mdkhairulislamtushar</tspan>
   </text>
-
-  <!-- Blinking cursor -->
-  <rect x="570" y="118" width="3" height="22" fill="#00ff41">
-    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
-  </rect>
-
-  <!-- Tagline -->
-  <text x="370" y="185" font-family="'Courier New', monospace" font-size="14" fill="#00d4ff" opacity="0.9">
-    <tspan>Cybersecurity Researcher &amp; Competitive Programmer</tspan>
+  
+  <text x="550" y="148" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#555">
+    <tspan x="550" dy="0">🎓 B.Sc. in CSE @ JKKNIU</tspan>
+    <tspan x="550" dy="20">🏆 National CTF Champion</tspan>
+    <tspan x="550" dy="20">🏅 ACM ICPC Regionalist</tspan>
   </text>
-
-  <!-- Status badges -->
-  <g transform="translate(370, 210)">
-    <rect x="0" y="0" width="130" height="22" rx="11" fill="#001a00" stroke="#00ff41" stroke-width="0.5"/>
-    <circle cx="14" cy="11" r="4" fill="#00ff41">
-      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
-    </circle>
-    <text x="25" y="15" fill="#00ff41" font-family="monospace" font-size="10">CTF Player</text>
-
-    <rect x="140" y="0" width="150" height="22" rx="11" fill="#001520" stroke="#00d4ff" stroke-width="0.5"/>
-    <circle cx="154" cy="11" r="4" fill="#00d4ff"/>
-    <text x="165" y="15" fill="#00d4ff" font-family="monospace" font-size="10">Bug Bounty Hunter</text>
-
-    <rect x="300" y="0" width="140" height="22" rx="11" fill="#001a00" stroke="#00ff41" stroke-width="0.5"/>
-    <circle cx="314" cy="11" r="4" fill="#00ff41"/>
-    <text x="325" y="15" fill="#00ff41" font-family="monospace" font-size="10">ACM ICPC Regionalist</text>
-  </g>
-
-  <!-- Right side: Terminal window art -->
-  <g transform="translate(740, 90)">
-    <!-- Terminal window -->
-    <rect x="0" y="0" width="380" height="220" rx="6" fill="#0d0d0d" stroke="#00ff41" stroke-width="1" opacity="0.9"/>
-    <!-- Title bar -->
-    <rect x="0" y="0" width="380" height="28" rx="6" fill="#1a1a1a"/>
-    <rect x="0" y="20" width="380" height="8" fill="#1a1a1a"/>
-    <!-- Window buttons -->
-    <circle cx="14" cy="14" r="5" fill="#ff5f56"/>
-    <circle cx="32" cy="14" r="5" fill="#ffbd2e"/>
-    <circle cx="50" cy="14" r="5" fill="#27c93f"/>
-    <!-- Terminal text -->
-    <text x="70" y="18" fill="#888" font-family="monospace" font-size="10">terminal — zsh</text>
-    <!-- Terminal lines with typewriter effect -->
-    <text x="15" y="55" fill="#00ff41" font-family="monospace" font-size="11">
-      <tspan>┌──(khairul㉿kali)-[~/profile]</tspan>
-    </text>
-    <text x="15" y="75" fill="#00ff41" font-family="monospace" font-size="11">
-      <tspan>└─$ cat about.txt</tspan>
-    </text>
-    <text x="15" y="100" fill="#00d4ff" font-family="monospace" font-size="11" opacity="0.9">
-      <tspan>{
-</tspan>
-    </text>
-    <text x="25" y="120" fill="#fff" font-family="monospace" font-size="11" opacity="0.9">
-      <tspan>"role": "Cybersecurity Researcher",</tspan>
-    </text>
-    <text x="25" y="140" fill="#fff" font-family="monospace" font-size="11" opacity="0.9">
-      <tspan>"skills": ["Web Sec", "Reverse Eng", "OSINT"],</tspan>
-    </text>
-    <text x="25" y="160" fill="#fff" font-family="monospace" font-size="11" opacity="0.9">
-      <tspan>"status": "Available for CTFs"</tspan>
-    </text>
-    <text x="15" y="180" fill="#00d4ff" font-family="monospace" font-size="11" opacity="0.9">
-      <tspan>}</tspan>
-    </text>
-
-    <!-- Blinking cursor on last line -->
-    <rect x="100" y="192" width="2" height="14" fill="#00ff41">
-      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-
-  <!-- Hex decoration bottom right -->
-  <g transform="translate(1120, 350)" opacity="0.12">
-    <polygon points="0,-25 21.6,-12.5 21.6,12.5 0,25 -21.6,12.5 -21.6,-12.5" fill="none" stroke="#00ff41" stroke-width="1"/>
-  </g>
-  <g transform="translate(1090, 325)" opacity="0.08">
-    <polygon points="0,-20 17.3,-10 17.3,10 0,20 -17.3,10 -17.3,-10" fill="none" stroke="#00d4ff" stroke-width="1"/>
-  </g>
-
-  <!-- Bottom right corner hex -->
-  <g transform="translate(60, 350)" opacity="0.12">
-    <polygon points="0,-25 21.6,-12.5 21.6,12.5 0,25 -21.6,12.5 -21.6,-12.5" fill="none" stroke="#00ff41" stroke-width="1"/>
-  </g>
+  
+  <rect x="50" y="195" width="900" height="35" rx="4" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="500" y="217" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" fill="#555">
+    "Passionate about securing systems, solving challenges, and leading security communities."
+  </text>
 </svg>
