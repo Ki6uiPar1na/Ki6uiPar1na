@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#050805"/>
+      <stop offset="30%" style="stop-color:#0a120a"/>
+      <stop offset="60%" style="stop-color:#080c10"/>
+      <stop offset="100%" style="stop-color:#050805"/>
+    </linearGradient>
+    <pattern id="gridPattern" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#00ff41" stroke-width="0.3" opacity="0.06"/>
+    </pattern>
+    <pattern id="hexPattern" width="120" height="207.84" patternUnits="userSpaceOnUse" opacity="0.04">
+      <path d="M60 0 L120 34.64 L120 103.92 L60 138.56 L0 103.92 L0 34.64Z" fill="none" stroke="#00ff41" stroke-width="0.5"/>
+      <path d="M60 207.84 L120 173.2 L120 103.92 L60 138.56 L0 103.92 L0 173.2Z" fill="none" stroke="#00ff41" stroke-width="0.5"/>
+    </pattern>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#bgGrad)"/>
+  <rect width="1200" height="600" fill="url(#gridPattern)"/>
+  <rect width="1200" height="600" fill="url(#hexPattern)"/>
+
+  <!-- Matrix rain columns -->
+  <g font-family="monospace" font-size="12" fill="#00ff41" opacity="0.08">
+    <!-- Column 1 --><text x="30" y="20">0</text><text x="30" y="40">1</text><text x="30" y="60">0</text>
+    <text x="30" y="80">1</text><text x="30" y="100">0</text><text x="30" y="120">0</text><text x="30" y="140">1</text>
+    <text x="30" y="160">0</text><text x="30" y="180">1</text><text x="30" y="200">1</text><text x="30" y="220">0</text>
+    <!-- Column 2 --><text x="90" y="40">1</text><text x="90" y="60">0</text><text x="90" y="80">1</text>
+    <text x="90" y="100">0</text><text x="90" y="120">0</text><text x="90" y="140">1</text><text x="90" y="160">1</text>
+    <!-- Column 3 --><text x="300" y="30">0</text><text x="300" y="50">1</text><text x="300" y="70">0</text>
+    <text x="300" y="90">0</text><text x="300" y="110">1</text><text x="300" y="130">0</text><text x="300" y="150">1</text>
+    <!-- Column 4 --><text x="500" y="50">1</text><text x="500" y="70">1</text><text x="500" y="90">0</text>
+    <text x="500" y="110">1</text><text x="500" y="130">0</text><text x="500" y="150">0</text><text x="500" y="170">1</text>
+    <!-- Column 5 --><text x="700" y="20">0</text><text x="700" y="40">0</text><text x="700" y="60">1</text>
+    <text x="700" y="80">0</text><text x="700" y="100">1</text><text x="700" y="120">1</text><text x="700" y="140">0</text>
+    <!-- Column 6 --><text x="900" y="35">1</text><text x="900" y="55">0</text><text x="900" y="75">1</text>
+    <text x="900" y="95">1</text><text x="900" y="115">0</text><text x="900" y="135">0</text><text x="900" y="155">1</text>
+    <!-- Column 7 --><text x="1050" y="45">0</text><text x="1050" y="65">1</text><text x="1050" y="85">0</text>
+    <text x="1050" y="105">1</text><text x="1050" y="125">0</text><text x="1050" y="145">1</text><text x="1050" y="165">0</text>
+    <!-- Column 8 --><text x="1150" y="25">1</text><text x="1150" y="45">0</text><text x="1150" y="65">0</text>
+    <text x="1150" y="85">1</text><text x="1150" y="105">1</text><text x="1150" y="125">0</text><text x="1150" y="145">1</text>
+  </g>
+
+  <!-- Scanning line animation -->
+  <rect x="0" y="0" width="1200" height="2" fill="#00ff41" opacity="0.08">
+    <animate attributeName="y" from="0" to="600" dur="8s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Ambient glow orbs -->
+  <circle cx="200" cy="150" r="80" fill="#00ff41" opacity="0.02">
+    <animate attributeName="r" values="80;100;80" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1000" cy="400" r="60" fill="#00d4ff" opacity="0.02">
+    <animate attributeName="r" values="60;80;60" dur="4s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Corner brackets -->
+  <g stroke="#00ff41" stroke-width="1" fill="none" opacity="0.15">
+    <path d="M20 20 L20 0 L0 0"/>
+    <path d="M1180 20 L1180 0 L1200 0"/>
+    <path d="M20 580 L20 600 L0 600"/>
+    <path d="M1180 580 L1180 600 L1200 600"/>
+  </g>
+</svg>
